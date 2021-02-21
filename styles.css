@@ -1,0 +1,57 @@
+/*  Color Scheme
+ *
+ *  #6200EE     purple
+ *  #dfdfdf     light gray
+ *  black       black
+ *  white       white
+ *
+ */
+
+html,
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background: #ebebeb;
+}
+
+.content {
+  padding: 2rem;
+  min-height: 85vh;
+  padding-bottom: 2.5rem;
+}
+
+input {
+  background: #dfdfdf;
+  border: 0.1px solid #dfdfdf;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.purple-btn {
+  background: #6200ee;
+  color: white;
+  outline: none;
+  border: none;
+  padding: 10px;
+}
+
+.purple-btn:hover,
+.purple-btn:focus {
+  background: #4601a7;
+  color: #dfdfdf;
+}
+
+b {
+  color: #6200ee;
+}
+
+.yellow-card {
+  background: #fff6c0;
+}
+
+#error-msg {
+  color: red;
+}
+
+li {
+  text-align: left;
+}
