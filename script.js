@@ -1,4 +1,5 @@
 const API_KEY = '270f08a92314c63d30e38cbd54002ea9';
+const API_BASE_URL = 'https://api.openweathermap.org/';
 
 document.getElementById('weather-submit').addEventListener('click', (event) => {
   event.preventDefault();
@@ -12,8 +13,7 @@ document.getElementById('weather-submit').addEventListener('click', (event) => {
   }
 
   /* Current Weather Conditions */
-  const url =
-    'http://api.openweathermap.org/data/2.5/weather?q=' +
+  const url = API_BASE_URL + 'data/2.5/weather?q=' +
     value +
     ',US&units=imperial' +
     '&APPID=' +
@@ -32,7 +32,7 @@ document.getElementById('weather-submit').addEventListener('click', (event) => {
         '<div class="rounded bg-light card p-4 my-4 align-items-center">';
       for (let i = 0; i < json.weather.length; i++) {
         liveResults +=
-          '<img src="http://openweathermap.org/img/w/' +
+        '<img src="' + API_BASE_URL + 'img/w/' +
           json.weather[i].icon +
           '.png"/>';
       }
@@ -60,8 +60,7 @@ document.getElementById('weather-submit').addEventListener('click', (event) => {
     });
 
   /* 5-day / 3-hour Forecast */
-  const url2 =
-    'http://api.openweathermap.org/data/2.5/forecast?q=' +
+  const url2 = API_BASE_URL + 'data/2.5/forecast?q=' +
     value +
     ', US&units=imperial' +
     '&APPID=' +
@@ -82,7 +81,7 @@ document.getElementById('weather-submit').addEventListener('click', (event) => {
           moment(json.list[i].dt_txt).format('dddd, MMM D @ h a') +
           '</h4>';
         forecastResults +=
-          '<img src="http://openweathermap.org/img/w/' +
+          '<img src="' + API_BASE_URL + 'img/w/' +
           json.list[i].weather[0].icon +
           '.png"/>';
         forecastResults +=
