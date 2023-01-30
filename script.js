@@ -1,4 +1,3 @@
-const API_KEY = '270f08a92314c63d30e38cbd54002ea9';
 const API_BASE_URL = 'https://api.openweathermap.org/';
 
 document.getElementById('weather-submit').addEventListener('click', (event) => {
@@ -17,7 +16,7 @@ document.getElementById('weather-submit').addEventListener('click', (event) => {
     value +
     ',US&units=imperial' +
     '&APPID=' +
-    API_KEY;
+    window.API_KEY;
   fetch(url)
     .then((response) => response.json())
     .then((json) => {
@@ -64,7 +63,7 @@ document.getElementById('weather-submit').addEventListener('click', (event) => {
     value +
     ', US&units=imperial' +
     '&APPID=' +
-    API_KEY;
+    window.API_KEY;
   fetch(url2)
     .then((response) => response.json())
     .then((json) => {
