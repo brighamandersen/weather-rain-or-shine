@@ -7,16 +7,14 @@
  *
  */
 
+:root {
+  --navbar-footer-height: 70px;
+}
+
 html,
 body {
   font-family: Helvetica, Arial, sans-serif;
   background: #ebebeb;
-}
-
-.content {
-  padding: 2rem;
-  min-height: 85vh;
-  padding-bottom: 2.5rem;
 }
 
 input {
@@ -24,6 +22,21 @@ input {
   border: 0.1px solid #dfdfdf;
   padding: 10px;
   box-sizing: border-box;
+}
+
+nav {
+  min-height: var(--navbar-footer-height);
+}
+
+.nav-footer {
+  height: var(--navbar-footer-height);
+}
+
+.content {
+  padding: 2rem;
+  min-height: calc(
+    100vh - var(--navbar-footer-height) - var(--navbar-footer-height)
+  );
 }
 
 .purple-btn {
