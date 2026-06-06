@@ -5,7 +5,7 @@ echo "Deploying weather"
 
 # nginx
 
-sudo cp /home/brig/code/weather-rain-or-shine/deploy/nginx.conf /etc/nginx/conf.d/weather.conf
+sudo cp /home/brig/dev/weather-rain-or-shine/deploy/nginx.conf /etc/nginx/conf.d/weather.conf
 
 sudo nginx -t
 sudo systemctl reload nginx
